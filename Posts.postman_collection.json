@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "733515cb-001f-4748-bab0-ffbc631945a0",
-		"name": "Week3 - Posts",
+		"_postman_id": "bbd3a0c2-b80b-405b-9890-b64ae351c418",
+		"name": "Week3 - Posts(Heroku)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -11,17 +11,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8080/posts",
-					"protocol": "http",
+					"raw": "https://pure-coast-73592.herokuapp.com/",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"pure-coast-73592",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
-						"posts"
+						""
 					]
 				}
 			},
@@ -33,15 +31,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8080/posts",
-					"protocol": "http",
+					"raw": "https://pure-coast-73592.herokuapp.com/posts",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"pure-coast-73592",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"posts"
 					]
@@ -65,17 +61,21 @@
 					"raw": "{\n    \"name\": \"Harold\",\n    \"content\": \"Hello everyone\"\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8080/posts",
-					"protocol": "http",
+					"raw": "https://pure-coast-73592.herokuapp.com/posts?Content-Type=application/json;charset=utf-8",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"pure-coast-73592",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"posts"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=utf-8"
+						}
 					]
 				}
 			},
@@ -87,15 +87,13 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8080/posts",
-					"protocol": "http",
+					"raw": "https://pure-coast-73592.herokuapp.com/posts",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"pure-coast-73592",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"posts"
 					]
@@ -107,25 +105,29 @@
 			"name": "DELET ROW",
 			"request": {
 				"method": "DELETE",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=utf-8",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "http://127.0.0.1:8080/posts/:uuid",
-					"protocol": "http",
+					"raw": "https://pure-coast-73592.herokuapp.com/posts/:id",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"pure-coast-73592",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"posts",
-						":uuid"
+						":id"
 					],
 					"variable": [
 						{
-							"key": "uuid",
-							"value": "62651d5a4e016b9f4c9da3e1"
+							"key": "id",
+							"value": null
 						}
 					]
 				}
@@ -148,15 +150,13 @@
 					"raw": "{\n    \"content\": \"Hi people\"\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8080/posts/:id",
-					"protocol": "http",
+					"raw": "https://pure-coast-73592.herokuapp.com/posts/:id",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"pure-coast-73592",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"posts",
 						":id"
